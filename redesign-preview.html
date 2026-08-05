@@ -145,6 +145,83 @@
   .social-row {
     display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
   }
+
+  /* Instagram profile block — matches live site embed look */
+  .ig-section { background: #fff; }
+  .ig-card {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .ig-avatar {
+    width: 88px; height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 12px;
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  .ig-username {
+    margin: 0 0 14px;
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .ig-stats {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin: 0 0 18px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+  .ig-stats strong {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .ig-stats span { font-weight: 500; color: var(--muted); font-size: 0.88rem; }
+  .ig-follow {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 40px; padding: 0 28px; margin-bottom: 28px;
+    border-radius: 8px;
+    background: #0095F6; color: #fff;
+    font-family: var(--display); font-weight: 700; font-size: 0.95rem;
+    transition: background .15s ease;
+  }
+  .ig-follow:hover { background: #1877F2; }
+  .ig-follow svg { width: 18px; height: 18px; }
+  .ig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    background: #fff;
+  }
+  .ig-grid a {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--bg-soft);
+  }
+  .ig-grid img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .25s ease;
+  }
+  .ig-grid a:hover img { transform: scale(1.04); }
+  .ig-grid a::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,.0);
+    transition: background .2s ease;
+  }
+  .ig-grid a:hover::after { background: rgba(0,0,0,.12); }
+  @media (max-width: 520px) {
+    .ig-stats { gap: 18px; font-size: 0.88rem; }
+    .ig-avatar { width: 72px; height: 72px; }
+  }
   .btn-sm { height: 40px; padding: 0 14px; font-size: 0.84rem; }
   .btn-block { width: 100%; }
   .btn-round { border-radius: 999px; }
@@ -608,6 +685,7 @@
         <a href="#menu">Order online</a>
         <a href="#enquire">Custom cakes</a>
         <a href="#about">Our story</a>
+        <a href="#instagram">Instagram</a>
         <a href="#reviews">Reviews</a>
       </nav>
       <div class="nav-cta">
@@ -909,6 +987,39 @@
             Follow @celabakehouse
           </a>
           <a class="btn btn-ghost" href="https://wa.me/918169096626" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ig-section" id="instagram">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Follow us on Instagram</h2>
+        <p>Daily cakes, custom orders &amp; studio moments — @celabakehouse</p>
+      </div>
+      <div class="ig-card reveal">
+        <img class="ig-avatar" src="./ig-avatar.jpg" alt="Cela Bakehouse on Instagram" width="192" height="192" />
+        <h3 class="ig-username">celabakehouse</h3>
+        <div class="ig-stats" aria-label="Instagram stats">
+          <div><strong>182</strong><span>posts</span></div>
+          <div><strong>1.4K</strong><span>followers</span></div>
+          <div><strong>39</strong><span>following</span></div>
+        </div>
+        <a class="ig-follow" href="https://instagram.com/celabakehouse" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Follow
+        </a>
+        <div class="ig-grid" aria-label="Instagram photo grid">
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/3-1.jpg" alt="Custom cake" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/1-1.jpg" alt="Bento cake" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/9-1.jpg" alt="Celebration cake" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/2-1.jpg" alt="Brownies" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/10-1.jpg" alt="Dessert box" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/11-1.jpg" alt="Floral cake" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/5-1.jpg" alt="Cheesecake" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/12-1.jpg" alt="Studio bake" loading="lazy" /></a>
+          <a href="https://instagram.com/celabakehouse" target="_blank" rel="noopener"><img src="./menu/8-1.jpg" alt="Gift box" loading="lazy" /></a>
         </div>
       </div>
     </div>
